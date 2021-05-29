@@ -1,10 +1,20 @@
-price = 9.99
-discount = 0.2
-result = price * (1 - discount)
 
-print(result)
+# print(result)
+
+# name = "Bob"
+# greeting = f"Hello, {name}"
+
+# print(greeting)
 
 name = "Bob"
-greeting = f"Hello, {name}"
+greeting = "Hello, {}"
 
-print(greeting)
+with_name = greeting.format(name)
+with_name_two = greeting.format("Rolf")
+
+print(with_name)
+print(with_name_two)
+
+longer_phrase = "Hello {}, Today is {}"
+formatted = longer_phrase.format(name, "Monday")
+print(formatted)
