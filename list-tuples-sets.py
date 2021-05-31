@@ -24,3 +24,8 @@ people = friends.union(others)
 print(people)
 both = friends.intersection(classmates)
 print(both)
+
+print(5 == 5)
+# compare
+print(10 != 10)
+print(11 >= 10)
