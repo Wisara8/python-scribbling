@@ -11,10 +11,22 @@
 
 # age()
 
-def sum(x, y):
-    return x + y
+# def sum(x, y):
+#     return x + y
 
 
-result = sum(5, y=8)
-# note you can't do the opposite of defining x and not y; if the first is declared the rest must be too
-print(result)
+# result = sum(5, y=8)
+# # note you can't do the opposite of defining x and not y; if the first is declared the rest must be too
+# print(result)
+
+def double(x):
+    return x * 2
+
+
+sequence = [1, 2, 3, 4, 5]
+doubled = [double(x) for x in sequence]
+# does the same as below
+doubledWithMap = map(double, sequence)
+# and this
+doubledWithLamba = map(lambda x: x * 2, sequence)
+# with the lamba you won't need the double(x) function
