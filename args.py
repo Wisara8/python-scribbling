@@ -24,3 +24,16 @@ def apply(*args, operator):
 
 
 print(apply(1, 3, 5, operator='*'))
+
+
+def apply(*args, operator):
+    if operator == '+':
+        return sum(args)
+    elif operator == '*':
+        # print("apply")
+        return multiply(*args)
+    else:
+        return "Not computed"
+
+
+print(apply(1, 3, 5, operator='*'))
