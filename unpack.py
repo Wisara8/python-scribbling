@@ -1,15 +1,8 @@
-# def named(**kwargs):
-#     print(kwargs)
+student = {'name': "Bob", "grades": (80, 90, 97, 95, 84)}
 
 
-# details = {'name': "Bob", 'age': 25}
-
-# named(**details)
-
-def unpack(**kwargs):
-    print(kwargs)
+def average(grades):
+    return sum(grades) / len(grades)
 
 
-details = {'name': "Bob", 'age': 25}
-
-unpack(**details)
+print(average(student['grades']))
