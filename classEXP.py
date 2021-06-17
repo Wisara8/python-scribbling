@@ -12,9 +12,13 @@ class Student:
 
 studentA = Student("Bob", (90, 95, 88, 74, 98))
 studentB = Student("Rolfe", (93, 45, 88, 70, 100))
+studentC = Student("Rolfe", (93, 45, 88, 70, 100))
 
 print(studentA.name)
 print(studentA.average_grade())
 
 print(studentB.name)
 print(studentB.average_grade())
+
+print(studentC.name)
+print(studentC.average_grade())
