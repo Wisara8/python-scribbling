@@ -16,7 +16,9 @@ class Book:
 
 book1 = Book("Harry Potter")
 book2 = Book("Python 101")
+book12 = Book("Pythonsssss Ahhhhh")
 
-shelf = BookShelf(book1, book2)
+
+shelf = BookShelf(book1, book2, book12)
 
 print(shelf)
