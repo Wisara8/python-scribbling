@@ -5,7 +5,8 @@ print("welcome to divisor programe")
 grades = []
 try:
     average = divide(sum(grades), len(grades))
-except ZeroDivisionError:
+except ZeroDivisionError as e:
+    print(e)
     print("no grades yet")
-
-print(f"average grade is {average}")
+else:
+    print(f"average grade is {average}")
