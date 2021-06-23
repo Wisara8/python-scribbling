@@ -10,3 +10,5 @@ except ZeroDivisionError as e:
     print("no grades yet")
 else:
     print(f"average grade is {average}")
+finally:
+    print("I always run regardless")
