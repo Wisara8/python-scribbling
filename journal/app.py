@@ -1,3 +1,4 @@
+# 3 commas for multi line commit
 menu = """Please select one of the following: 
 1) Add new entry for todat 
 2)  View entries 
@@ -6,6 +7,9 @@ menu = """Please select one of the following:
 Your Selection: """
 
 welcome = "Welcome to the programming diary!"
+
+# Walrus notation not available in insatlled version of Python
+
 print(welcome)
 
 user_input = input(menu)
