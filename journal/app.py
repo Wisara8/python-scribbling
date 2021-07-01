@@ -20,6 +20,8 @@ while user_input != "3":
         print("adding...")
     elif user_input == "2":
         print("Viewing")
+    elif user_input == "4":
+        print("one too high")
     else:
         print("Invalid option")
 
