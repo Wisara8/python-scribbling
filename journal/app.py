@@ -1,3 +1,5 @@
+from database import add_entry, view_entries
+
 # 3 commas for multi line commit
 menu = """Please select one of the following: 
 1) Add new entry for todat 
@@ -17,11 +19,9 @@ user_input = input(menu)
 while user_input != "3":
     # hadnle code here
     if user_input == "1":
-        print("adding...")
+        add_entry()
     elif user_input == "2":
-        print("Viewing")
-    elif user_input == "4":
-        print("one too high")
+        view_entries()
     else:
         print("Invalid option")
 
