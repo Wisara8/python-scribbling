@@ -10,6 +10,8 @@ Your Selection: """
 
 welcome = "Welcome to the programming diary!"
 
+print("played with databases today")
+
 
 def prompt_new_entry():
     entry_content = input("What did we learn today? ")
