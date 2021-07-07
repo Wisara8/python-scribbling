@@ -11,6 +11,7 @@ Your Selection: """
 welcome = "Welcome to the programming diary!"
 
 print("played with databases today")
+print("played with databases today, again")
 
 
 def prompt_new_entry():
