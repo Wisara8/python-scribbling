@@ -9,7 +9,10 @@ def create_table():
 
 
 def add_entry(entry_content, entry_date):
-    entries.append({"content": entry_content, "date": entry_date})
+    with connection:
+        connection.execute(
+            "INSERT INTO entries VALUES ('This is test content', '2021-01-01');"
+        )
 
 
 def get_entries():

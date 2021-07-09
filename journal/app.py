@@ -1,9 +1,9 @@
-from database import add_entry, get_entries
+from database import create_table, add_entry, get_entries
 
 # 3 commas for multi line commit
 menu = """Please select one of the following: 
-1) Add new entry for todat 
-2)  View entries 
+1) Add new entry for today 
+2) View entries 
 3) Exit 
 
 Your Selection: """
@@ -23,6 +23,7 @@ def view_entries(entries):
 
 
 print(welcome)
+create_table()
 
 user_input = input(menu)
 
