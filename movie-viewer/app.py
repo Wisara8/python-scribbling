@@ -10,12 +10,12 @@ menu = """Please select one of the following options:
 
 Your selection: """
 welcome = "Welcome to the watchlist app!"
+goodbye = "Exiting App, Goodbye"
 
 
 print(welcome)
 database.create_tables()
 # no walrus symbol available
-goodbye - "Exiting App, Goodbye"
 user_input = input(menu)
 
 while user_input != "6":
