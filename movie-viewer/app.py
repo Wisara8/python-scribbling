@@ -14,8 +14,11 @@ welcome = "Welcome to the watchlist app!"
 
 print(welcome)
 database.create_tables()
+# no walrus symbol available
+goodbye - "Exiting App, Goodbye"
+user_input = input(menu)
 
-while (user_input: = input(menu)) != "6":
+while user_input != "6":
     if user_input == "1":
         pass
     elif user_input == "2":
