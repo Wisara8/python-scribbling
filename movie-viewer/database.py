@@ -16,6 +16,8 @@ SELECT_UPCOMING_MOVIES = "SELECT * FROM movies WHERE release_timestamp > ?;"
 
 SELECT_WATCHED_MOVIES = "SELECT * FROM movies WHERE watched = 1;"
 
+SET_MOVIES_WATCHED = "UPDATE movies SET watched = 1 WHERE title = ?;"
+
 connection = sqlite3.connect("data.db")
 
 
@@ -47,5 +49,6 @@ def get_watched_movies():
         return cursor.fetchall()
 
 
-def watch_movie():
-    pass
+def watch_movie(title):
+    with connection:
+        connection.execute(SET_MOVIES_WATCHED, (title,))
