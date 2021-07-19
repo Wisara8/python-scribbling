@@ -26,7 +26,7 @@ def create_tables():
         connection.execute(CREATE_MOVIES_TABLE)
 
 
-def add_moves(title, release_timestamp):
+def add_movie(title, release_timestamp):
     with connection:
         connection.execute(INSERT_MOVIES, (title, release_timestamp))
 
