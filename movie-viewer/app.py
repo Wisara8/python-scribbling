@@ -8,12 +8,9 @@ menu = """Please select one of the following options:
 4) Watch a movie
 5) View watched movies.
 6) Exit.
-7) Delete me.
 
 Your selection: """
 welcome = "Welcome to the watchlist app!"
-goodbye = "Exiting App, Goodbye"
-
 
 print(welcome)
 database.create_tables()
@@ -28,11 +25,18 @@ def prompt_add_movie():
     database.add_movie(title, timestamp)
 
 
-def print_movie_list(movies):
-    print("--- Upcoming movies ---")
+def print_movie_list(header, movies):
+    print(f"--- {header} movies ---")
     for movie in movies:
-        print(f"{movie[0]} (on {movie[1]})")
+        movie_date = datetime.datetime.fromtimestamp(movie[1])
+        human_date = movie_date.strftime("%b %d %Y")
+        print(f"{movie[0]} (on {human_date})")
     print("---  \n")
+
+
+def prompt_watch_movie():
+    movie = input("Enter movie title: ")
+    database.watch_movie(movie)
 
 
 user_input = input(menu)
@@ -43,13 +47,18 @@ while user_input != "6":
         break
     elif user_input == "2":
         movies = database.get_movies(True)
-        print_movie_list(movies)
+        print_movie_list("Upcoming", movies)
         break
     elif user_input == "3":
-        pass
+        movies = database.get_movies()
+        print_movie_list("All", movies)
+        break
     elif user_input == "4":
-        pass
+        prompt_watch_movie()
+        break
     elif user_input == "5":
-        pass
+        movies = database.get_watched_movies()
+        print_movie_list("Watched", movies)
+        break
     else:
         print("Invalid input, please try again!")
