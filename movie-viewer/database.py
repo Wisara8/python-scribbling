@@ -18,6 +18,8 @@ SELECT_WATCHED_MOVIES = "SELECT * FROM movies WHERE watched = 1;"
 
 SET_MOVIES_WATCHED = "UPDATE movies SET watched = 1 WHERE title = ?;"
 
+DELETE_MOVIE = "DELETE FROM movies WHERE title = ?;"
+
 connection = sqlite3.connect("data.db")
 
 
@@ -52,3 +54,8 @@ def get_watched_movies():
 def watch_movie(title):
     with connection:
         connection.execute(SET_MOVIES_WATCHED, (title,))
+
+# Start date
+# technologies used
+# Need a graphic cards?
+# contracts given when and length
