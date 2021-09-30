@@ -8,7 +8,6 @@ menu = """Please select one of the following options:
 4) Watch a movie
 5) View watched movies.
 6) Exit.
-7) Exit.
 
 Your selection: """
 welcome = "Welcome to the watchlist app!"
